@@ -186,3 +186,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/hisaic
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+## See also
+
+[モバイルアプリのリリース作業自動化への取り組み - ペパボテックブログ](https://tech.pepabo.com/2017/10/06/improve-application-release-flow/)
