@@ -59,8 +59,10 @@ release_branch:
     normal:
         base: "develop"
         branch: "release/v<%= @context.options.raw.version %>"
-    release_note: |
-        release note's template
+    changelogs:
+        - path: "./fastlane/metadata/android/ja-JP/changelogs"
+          body: |
+              changelog's body
 release_pullreq:
     bases:
         - master
@@ -99,7 +101,6 @@ Options:
   [--release-issue], [--no-release-issue]
   [--release-branch], [--no-release-branch]
   [--release-pullreqs], [--no-release-pullreqs]
-  [--release-note], [--no-release-note]
   [--config-file=CONFIG-FILE]
                                                  # Default: ./tenma/tenma/prepare.yml
   [--github-token=GITHUB-TOKEN]
