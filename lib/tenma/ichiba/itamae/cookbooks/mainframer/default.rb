@@ -5,6 +5,6 @@ end
 
 file "./mainframer/android/local.properties" do
   action :create
-  owner tenma_user
-  content "sdk.dir=/home/#{tenma_user}/android/android-sdk-linux"
+  owner Tenma::Ichiba::Context::USER
+  content "sdk.dir=/home/#{Tenma::Ichiba::Context::USER}/android/android-sdk-linux"
 end
