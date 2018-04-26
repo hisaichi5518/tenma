@@ -1,3 +1,6 @@
+require 'yaml'
+require 'hashie/mash'
+
 module Tenma
   module Prepare
     class Config
