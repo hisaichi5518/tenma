@@ -2,6 +2,9 @@
 
 Tenma is command line tool for mobile application development.
 
+- [:kissing_closed_eyes:Prepare for mobile application release.](README.md#kissing_closed_eyeskissing_closed_eyes-prepare-for-mobile-application-release-kissing_closed_eyeskissing_closed_eyes)
+- [:relaxed:Manipulate remote build instance for android application.](README.md#relaxedrelaxed-manipulate-remote-build-instance-for-android-application-relaxedrelaxed)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -150,7 +153,7 @@ Execute the `tenma help ichiba` command, If you want more information.
 
 Ex)
 ```
- $ be exe/tenma help ichiba
+ $ bundle exec tenma help ichiba
 Usage:
   tenma ichiba --instance-disk-size=N --instance-machine-type=INSTANCE-MACHINE-TYPE --instance-name=INSTANCE-NAME --instance-project=INSTANCE-PROJECT --instance-zone=INSTANCE-ZONE --node-yaml=NODE-YAML --ssh-key-file=SSH-KEY-FILE
 
