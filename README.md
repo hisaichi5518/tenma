@@ -86,6 +86,25 @@ bundle exec tenma prepare --release-branch --release-pullreqs --version 7.14.0
 
 Execute the `tenma help prepare` command, If you want more information.
 
+Ex)
+```
+ $ bundle exec help prepare
+Usage:
+  tenma prepare --version=VERSION
+
+Options:
+  [--kpt-issue], [--no-kpt-issue]
+  [--release-issue], [--no-release-issue]
+  [--release-branch], [--no-release-branch]
+  [--release-pullreqs], [--no-release-pullreqs]
+  [--release-note], [--no-release-note]
+  [--config-file=CONFIG-FILE]
+                                                 # Default: ./tenma/tenma/prepare.yml
+  [--github-token=GITHUB-TOKEN]
+                                                 # Default: <Github personal access token>
+  --version=VERSION
+```
+
 ### Android's remote build
 
 #### 1. Set `TENMA_ICHIBA_INSTANCE_PROJECT`
@@ -123,6 +142,32 @@ bundle exec tenma ichiba --delete-instance
 ```
 
 Execute the `tenma help ichiba` command, If you want more information.
+
+Ex)
+```
+ $ be exe/tenma help ichiba
+Usage:
+  tenma ichiba --instance-disk-size=N --instance-machine-type=INSTANCE-MACHINE-TYPE --instance-name=INSTANCE-NAME --instance-project=INSTANCE-PROJECT --instance-zone=INSTANCE-ZONE --node-yaml=NODE-YAML --ssh-key-file=SSH-KEY-FILE
+
+Options:
+  [--create-instance], [--no-create-instance]
+  [--provision-instance], [--no-provision-instance]
+  [--delete-instance], [--no-delete-instance]
+  [--restart-instance], [--no-restart-instance]
+  --instance-name=INSTANCE-NAME
+                                                     # Default: remote-build
+  --instance-zone=INSTANCE-ZONE
+                                                     # Default: asia-northeast1-c
+  --instance-project=INSTANCE-PROJECT
+  --instance-machine-type=INSTANCE-MACHINE-TYPE
+                                                     # Default: n1-highcpu-16
+  --instance-disk-size=N
+                                                     # Default: 20
+  --ssh-key-file=SSH-KEY-FILE
+                                                     # Default: ~/.ssh/id_rsa
+  --node-yaml=NODE-YAML
+                                                     # Default: ./tenma/ichiba.yml
+```
 
 ## Development
 
