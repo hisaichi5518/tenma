@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-### Prepare for mobile application releases
+### :kissing_closed_eyes::kissing_closed_eyes: Prepare for mobile application releases :kissing_closed_eyes::kissing_closed_eyes:
 
 #### 1. Set `TENMA_GITHUB_TOKEN` environment.
 
@@ -105,7 +105,7 @@ Options:
   --version=VERSION
 ```
 
-### Android's remote build
+### :relaxed::relaxed: Android's remote build :relaxed::relaxed:
 
 #### 1. Set `TENMA_ICHIBA_INSTANCE_PROJECT`
 
