@@ -1,6 +1,6 @@
 directory "./mainframer/android" do
   action :create
-  owner Tenma::Ichiba::Context::User
+  owner Tenma::Ichiba::Context::USER
 end
 
 file "./mainframer/android/local.properties" do
