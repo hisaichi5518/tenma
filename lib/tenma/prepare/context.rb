@@ -29,7 +29,7 @@ module Tenma
         milestones = client.milestones(config.github_reponame, {state: "open"}).select do |milestone|
           milestone[:title].include? options.raw.version
         end
-        milestones.first or raise "Can't find a milestone."
+        milestones.first or raise "Can't find a #{options.raw.version} milestone."
       end
 
       def load_release_manager!
