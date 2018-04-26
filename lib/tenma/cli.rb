@@ -11,7 +11,7 @@ module Tenma
     option "release-branch", type: :boolean
     option "release-pullreqs", type: :boolean
     option "release-note", type: :boolean
-    option "config-file", type: :string, default: "tenma/prepare.yml"
+    option "config-file", type: :string, default: File.expand_path("tenma/prepare.yml")
     option "github-token", type: :string, default: ENV["TENMA_GITHUB_TOKEN"]
     option "version", type: :string, required: true
     def prepare
@@ -28,7 +28,7 @@ module Tenma
     option "instance-project", type: :string, default: ENV["TENMA_ICHIBA_INSTANCE_PROJECT"], required: true
     option "instance-machine-type", type: :string, default: "n1-highcpu-16", required: true
     option "instance-disk-size", type: :numeric, default: 20, required: true
-    option "ssh-key-file", type: :string, default: "~/.ssh/id_rsa", required: true
+    option "ssh-key-file", type: :string, default: File.expand_path("~/.ssh/id_rsa"), required: true
     option "node-json", type: :string, default: File.expand_path("tenma/ichiba.json"), required: true
     def ichiba
       Tenma::Ichiba::Command.new(self).execute
