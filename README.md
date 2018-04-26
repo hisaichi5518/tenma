@@ -77,6 +77,37 @@ bundle exec tenma prepare --release-branch --release-pullreqs --version 7.14.0
 
 Execute the `tenma help prepare` command, If you want more information.
 
+### Android's remote build
+
+
+#### 1. Setup `tenma/ichiba.json`
+
+```yaml
+android_sdk:
+    license: "your license key"
+    update_list:
+        - platform-tools
+        - build-tools-27.0.3
+        - android-27
+        - extra-android-m2repository
+        - extra-google-m2repository
+        - extra-google-google_play_services
+```
+
+#### 2. Run command
+
+Run following command, if you want to create and provision remote-build instance.
+```
+bundle exec tenma ichiba --create-instance --provision-instance
+```
+
+Run following command, if you want to delete remote-build instance.
+```
+bundle exec tenma ichiba --delete-instance
+```
+
+Execute the `tenma help ichiba` command, If you want more information.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
