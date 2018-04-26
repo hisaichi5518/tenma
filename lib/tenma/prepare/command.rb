@@ -1,3 +1,9 @@
+require 'tenma/prepare/context'
+require 'tenma/prepare/kpt_issue'
+require 'tenma/prepare/release_issue'
+require 'tenma/prepare/release_branch'
+require 'tenma/prepare/release_pullreqs'
+
 module Tenma
   module Prepare
     class Command
