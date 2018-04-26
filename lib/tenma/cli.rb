@@ -5,7 +5,7 @@ require 'tenma/ichiba/command'
 module Tenma
   class CLI < ::Thor
 
-    desc "prepare", "Prepare for mobile application releases"
+    desc "prepare", "Prepare for mobile application release."
     option "kpt-issue", type: :boolean
     option "release-issue", type: :boolean
     option "release-branch", type: :boolean
@@ -18,7 +18,7 @@ module Tenma
       Tenma::Prepare::Command.new(self).execute
     end
 
-    desc "ichiba", "instance operation command for Android's remote build"
+    desc "ichiba", "Manipulate remote build instance for android application."
     option "create-instance", type: :boolean
     option "provision-instance", type: :boolean
     option "delete-instance", type: :boolean
