@@ -29,7 +29,7 @@ module Tenma
     option "instance-machine-type", type: :string, default: "n1-highcpu-16", required: true
     option "instance-disk-size", type: :numeric, default: 20, required: true
     option "ssh-key-file", type: :string, default: File.expand_path("~/.ssh/id_rsa"), required: true
-    option "node-json", type: :string, default: File.expand_path("tenma/ichiba.json"), required: true
+    option "node-yaml", type: :string, default: File.expand_path("tenma/ichiba.yml"), required: true
     def ichiba
       Tenma::Ichiba::Command.new(self).execute
     end

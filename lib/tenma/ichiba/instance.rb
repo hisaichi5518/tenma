@@ -34,10 +34,10 @@ module Tenma
 
         puts "Provision instance..."
         role_file = File.expand_path('../itamae/roles/remote.rb', __FILE__)
-        node_json = context.options.raw.node_json
+        node_yaml = context.options.raw.node_yaml
         Itamae::Runner.run([role_file], :ssh, {
           host: "#{name}.#{zone}.#{project}",
-          node_json: node_json,
+          node_yaml: node_yaml,
           color: false,
           sudo: true,
           shell: "/bin/sh",

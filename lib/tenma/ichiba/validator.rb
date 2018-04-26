@@ -11,8 +11,8 @@ module Tenma
           raise ValidationException, "required gcloud command"
         end
 
-        if !File.exist?(context.options.raw.node_json)
-          raise ValidationException, "Can't find #{context.options.raw.node_json}"
+        if !File.exist?(context.options.raw.node_yaml)
+          raise ValidationException, "Can't find #{context.options.raw.node_yaml}"
         end
 
         if context.options.provision_instance? && (ENV["USER"].nil? || ENV["USER"].empty?)
