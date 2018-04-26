@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ### Prepare for mobile application releases
 
-#### 1. Setup `tenma/prepare.yml`
+#### 1. Create `tenma/prepare.yml`
 
 ```yaml
 github:
@@ -80,7 +80,7 @@ Execute the `tenma help prepare` command, If you want more information.
 ### Android's remote build
 
 
-#### 1. Setup `tenma/ichiba.json`
+#### 1. Create `tenma/ichiba.json`
 
 ```yaml
 android_sdk:
