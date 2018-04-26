@@ -84,6 +84,8 @@ Run following command, if you want to create Release branch and Release pull-req
 bundle exec tenma prepare --release-branch --release-pullreqs --version 7.14.0
 ```
 
+#### 4. Finish! :helicopter:
+
 Execute the `tenma help prepare` command, If you want more information.
 
 Ex)
@@ -140,6 +142,8 @@ Run following command, if you want to delete remote-build instance.
 ```
 bundle exec tenma ichiba --delete-instance
 ```
+
+#### 4. Finish! :helicopter:
 
 Execute the `tenma help ichiba` command, If you want more information.
 
