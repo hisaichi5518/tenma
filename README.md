@@ -28,7 +28,7 @@ Or install it yourself as:
 
 Set `TENMA_GITHUB_TOKEN` at .zshrc or .bashrc.
 ```
-export TENMA_GITHUB_TOKEN=17612aa33b2dab12ae19ef8619e59087109238741234
+export TENMA_GITHUB_TOKEN=your-github-personal-access-token
 ```
 
 #### 2. Create `tenma/prepare.yml`
