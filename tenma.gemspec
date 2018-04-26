@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["hisaichi5518"]
   spec.email         = ["hisaichi5518@gmail.com"]
 
-  spec.summary       = %q{Nandemo command}
-  spec.description   = %q{Nandemo command}
+  spec.summary       = %q{Tenma is command line tool for mobile application development.}
+  spec.description   = %q{Tenma is command line tool for mobile application development.}
   spec.homepage      = "https://github.com/hisaichi5518/tenma"
   spec.license       = "MIT"
 
