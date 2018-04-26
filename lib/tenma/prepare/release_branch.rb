@@ -7,7 +7,6 @@ module Tenma
     class ReleaseBranch
 
       TEMP_DIR = "tenma-build"
-      FASTLANE_METADATA_DIR = 'fastlane/metadata/android/ja-JP/changelogs/'
 
       def initialize(context)
         @context = context
@@ -24,19 +23,27 @@ module Tenma
 
         git.commit("version++")
 
-        if @context.options.create_release_note?
-          # ディレクトリがなかったら作る
-          FileUtils::mkdir_p(File.join(@workdir, TEMP_DIR, FASTLANE_METADATA_DIR))
-          File.open(release_note_file, 'w') do |file|
-            file.puts release_note(@context.config.raw.release_branch.release_note)
-          end
-          git.add(release_note_file)
-          git.commit("Add release note template")
+        changelogs = @context.config.raw.release_branch&.changelogs
+        changelogs&.each do |changelog|
+          file = create_changelog_file(changelog)
+          git.add(file)
+          git.commit("Add changelog to #{changelog.path}")
         end
         git.push(git.remote("origin"), release_branch)
       end
 
-      def release_note(note)
+      def create_changelog_file(changelog)
+        FileUtils::mkdir_p(File.join(@workdir, TEMP_DIR, changelog.path))
+
+        file = changelog_file(changelog.path)
+        File.open(file, 'w') do |file|
+          file.puts changelog(changelog.body)
+        end
+
+        return file
+      end
+
+      def changelog(note)
         return '' if note.nil?
 
         ERB.new(note).result(binding)
@@ -57,12 +64,12 @@ module Tenma
       end
 
       def version_file
-        File.absolute_path(File.join(@workdir, TEMP_DIR, @context.config.raw.release_branch.version_file)).to_s
+        File.absolute_path(File.join(@workdir, TEMP_DIR, @context.config.raw.release_branch.version_file))
       end
 
-      def release_note_file
-        file = FASTLANE_METADATA_DIR + parse_version.to_s + '.txt'
-        File.absolute_path(File.join(@workdir, TEMP_DIR, file)).to_s
+      def changelog_file(path)
+        file = parse_version.to_s + '.txt'
+        File.absolute_path(File.join(@workdir, TEMP_DIR, path, file))
       end
 
       def parse_version
