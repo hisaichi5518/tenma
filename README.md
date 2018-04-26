@@ -20,7 +20,62 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Prepare for mobile application releases
+
+#### 1. Setup `tenma/prepare.yml`
+
+```yaml
+github:
+    web_url: "https://github.com/"
+    api_url: "https://github.com/api/v3"
+    owner: "hisaichi5518"
+    repo: "tenma"
+kpt_issue:
+    labels:
+        - KPT
+    title: "v<%= @context.options.raw.version %> KPT"
+    body: |
+        KPT issue's body
+release_issue:
+    labels:
+        - Release
+    title: "v<%= @context.options.raw.version %> Release"
+    body: |
+        Release issue's body
+release_branch:
+    version_file: "VERSION"
+    hotfix:
+        base: "master"
+        branch: "hotfix/v<%= @context.options.raw.version %>"
+    normal:
+        base: "develop"
+        branch: "release/v<%= @context.options.raw.version %>"
+    release_note: |
+        release note's template
+release_pullreq:
+    bases:
+        - master
+        - develop
+    labels:
+        - ReleaseBranch
+    title: "【<%= base_branch %>】<%= @context.options.raw.version %> Release"
+    body: |
+        Release pull-request's body
+```
+
+#### 2. Run command
+
+Run following command, if you want to create KPT issue and Release issue.
+```
+bundle exec tenma prepare --kpt-issue --release-issue --version 7.14.0
+```
+
+Run following command, if you want to create Release branch and Release pull-requests.
+```
+bundle exec tenma prepare --release-branch --release-pullreqs --version 7.14.0
+```
+
+Execute the `tenma help prepare` command, If you want more information.
 
 ## Development
 
