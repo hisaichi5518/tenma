@@ -3,7 +3,7 @@
 Tenma is command line tool for mobile application development.
 
 - [:kissing_closed_eyes:Prepare for mobile application release.](README.md#kissing_closed_eyeskissing_closed_eyes-prepare-for-mobile-application-release-kissing_closed_eyeskissing_closed_eyes)
-- [:relaxed:Manipulate remote build instance for android application.](README.md#relaxedrelaxed-manipulate-remote-build-instance-for-android-application-relaxedrelaxed)
+- [:relaxed:Manipulate "Android-remote-build" instance.](README.md#relaxedrelaxed-manipulate-android-remote-build-instance-relaxedrelaxed)
 
 ## Installation
 
@@ -111,7 +111,7 @@ Options:
   --version=VERSION
 ```
 
-### :relaxed::relaxed: Manipulate remote build instance for android application. :relaxed::relaxed:
+### :relaxed::relaxed: Manipulate "Android-remote-build" instance. :relaxed::relaxed:
 
 #### 1. Set `TENMA_ICHIBA_INSTANCE_PROJECT`
 
