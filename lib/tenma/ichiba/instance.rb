@@ -4,8 +4,6 @@ module Tenma
   module Ichiba
     class Instance
 
-      NAME = "remote-build"
-
       attr_reader :context, :name, :type, :zone, :project, :disk_size
       def initialize(context)
         @context = context

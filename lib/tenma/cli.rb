@@ -22,7 +22,7 @@ module Tenma
     option "provision-instance", type: :boolean
     option "delete-instance", type: :boolean
     option "restart-instance", type: :boolean
-    option "instance-name", type: :string, default: Tenma::Ichiba::Instance::NAME, required: true
+    option "instance-name", type: :string, default: "remote-build", required: true
     option "instance-zone", type: :string, default: "asia-northeast1-c", required: true
     option "instance-project", type: :string, default: ENV["TENMA_ICHIBA_INSTANCE_PROJECT"], required: true
     option "instance-machine-type", type: :string, default: "n1-highcpu-16", required: true
