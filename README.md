@@ -26,7 +26,7 @@ Or install it yourself as:
 
 [Github Personal access tokens](https://github.com/settings/tokens) is required. The only necessary scope is repo.
 
-Set `TENMA_GITHUB_TOKEN` for .zshrc or .bashrc.
+Set `TENMA_GITHUB_TOKEN` at .zshrc or .bashrc.
 ```
 export TENMA_GITHUB_TOKEN=17612aa33b2dab12ae19ef8619e59087109238741234
 ```
@@ -109,7 +109,7 @@ Options:
 
 #### 1. Set `TENMA_ICHIBA_INSTANCE_PROJECT`
 
-Set `TENMA_ICHIBA_INSTANCE_PROJECT` for .zshrc or .bashrc.
+Set `TENMA_ICHIBA_INSTANCE_PROJECT` at .zshrc or .bashrc.
 
 ```
 export TENMA_ICHIBA_INSTANCE_PROJECT=your-gcp-project
