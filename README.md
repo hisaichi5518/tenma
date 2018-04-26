@@ -22,7 +22,16 @@ Or install it yourself as:
 
 ### Prepare for mobile application releases
 
-#### 1. Create `tenma/prepare.yml`
+#### 1. Set `TENMA_GITHUB_TOKEN` environment.
+
+[Github Personal access tokens](https://github.com/settings/tokens) is required. The only necessary scope is repo.
+
+Set `TENMA_GITHUB_TOKEN` for .zshrc or .bashrc.
+```
+export TENMA_GITHUB_TOKEN=17612aa33b2dab12ae19ef8619e59087109238741234
+```
+
+#### 2. Create `tenma/prepare.yml`
 
 ```yaml
 github:
@@ -63,7 +72,7 @@ release_pullreq:
         Release pull-request's body
 ```
 
-#### 2. Run command
+#### 3. Run command
 
 Run following command, if you want to create KPT issue and Release issue.
 ```
@@ -79,8 +88,15 @@ Execute the `tenma help prepare` command, If you want more information.
 
 ### Android's remote build
 
+#### 1. Set `TENMA_ICHIBA_INSTANCE_PROJECT`
 
-#### 1. Create `tenma/ichiba.json`
+Set `TENMA_ICHIBA_INSTANCE_PROJECT` for .zshrc or .bashrc.
+
+```
+export TENMA_ICHIBA_INSTANCE_PROJECT=your-gcp-project
+```
+
+#### 2. Create `tenma/ichiba.json`
 
 ```yaml
 android_sdk:
@@ -94,7 +110,7 @@ android_sdk:
         - extra-google-google_play_services
 ```
 
-#### 2. Run command
+#### 3. Run command
 
 Run following command, if you want to create and provision remote-build instance.
 ```
