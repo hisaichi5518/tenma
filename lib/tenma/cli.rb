@@ -1,5 +1,6 @@
 require 'thor'
 require 'tenma/prepare/command'
+require 'tenma/ichiba/command'
 
 module Tenma
   class CLI < ::Thor
