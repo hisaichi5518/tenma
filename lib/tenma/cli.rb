@@ -9,6 +9,7 @@ module Tenma
     option "release-issue", type: :boolean
     option "release-branch", type: :boolean
     option "release-pullreqs", type: :boolean
+    option "release-note", type: :boolean
     option "config-file", type: :string, default: "tenma/prepare.yml"
     option "github-token", type: :string, default: ENV["TENMA_GITHUB_TOKEN"]
     option "version", type: :string, required: true

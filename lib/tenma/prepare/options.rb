@@ -25,6 +25,10 @@ module Tenma
         return !!raw.release_pullreqs
       end
 
+      def create_release_note?
+        return !!raw.release_note
+      end
+
       def hotfix?
         raw.version.split(".")[2] != "0"
       end

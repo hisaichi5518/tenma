@@ -23,7 +23,8 @@ module Tenma
         git.add(version_file)
 
         git.commit("version++")
-        if @context.config.raw.github.repo == 'android'
+
+        if @context.options.create_release_note?
           # ディレクトリがなかったら作る
           FileUtils::mkdir_p(File.join(@workdir, TEMP_DIR, FASTLANE_METADATA_DIR))
           File.open(release_note_file, 'w') do |file|
