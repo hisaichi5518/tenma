@@ -4,7 +4,7 @@ module Tenma
   module Ichiba
     class Context
 
-      USER = ENV["USER"] or raise "Can't read ENV[USER]"
+      USER = ENV["USER"]
 
       attr_reader :options
 
