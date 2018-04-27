@@ -5,22 +5,6 @@ Tenma is command line tool for mobile application development.
 - [:kissing_closed_eyes:Prepare for mobile application release.](README.md#kissing_closed_eyeskissing_closed_eyes-prepare-for-mobile-application-release-kissing_closed_eyeskissing_closed_eyes)
 - [:relaxed:Manipulate "Android-remote-build" instance.](README.md#relaxedrelaxed-manipulate-android-remote-build-instance-relaxedrelaxed)
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'tenma'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install tenma
-
 ## Usage
 
 ### :kissing_closed_eyes::kissing_closed_eyes: Prepare for mobile application release. :kissing_closed_eyes::kissing_closed_eyes:
@@ -176,6 +160,22 @@ Options:
   --node-yaml=NODE-YAML
                                                      # Default: ./tenma/ichiba.yml
 ```
+
+## Installation
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'tenma'
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install tenma
 
 ## Development
 
