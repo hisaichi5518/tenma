@@ -97,7 +97,7 @@ Options:
 
 ### :relaxed::relaxed: Manipulate "Android-remote-build" instance. :relaxed::relaxed:
 
-#### 1. :cloud: Install `gcloud` command.
+#### 1. :cloud: Install and init `gcloud` command.
 
 [About gcloud](https://cloud.google.com/sdk/gcloud)
 
