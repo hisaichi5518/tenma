@@ -9,7 +9,7 @@ Tenma is command line tool for mobile application development.
 
 ### :kissing_closed_eyes::kissing_closed_eyes: Prepare for mobile application release. :kissing_closed_eyes::kissing_closed_eyes:
 
-#### 1. Set `TENMA_GITHUB_TOKEN` environment.
+#### 1. Set `TENMA_GITHUB_TOKEN` environment.:paperclip:
 
 [Github Personal access tokens](https://github.com/settings/tokens) is required. The only necessary scope is repo.
 
@@ -18,7 +18,7 @@ Set `TENMA_GITHUB_TOKEN` at .zshrc or .bashrc.
 export TENMA_GITHUB_TOKEN=your-github-personal-access-token
 ```
 
-#### 2. Create `tenma/prepare.yml`
+#### 2. Create `tenma/prepare.yml`:memo:
 
 ```yaml
 github:
@@ -61,7 +61,7 @@ release_pullreq:
         Release pull-request's body
 ```
 
-#### 3. Run command
+#### 3. Run command:runner:
 
 Run following command, if you want to create KPT issue and Release issue.
 ```
@@ -97,7 +97,7 @@ Options:
 
 ### :relaxed::relaxed: Manipulate "Android-remote-build" instance. :relaxed::relaxed:
 
-#### 1. Set `TENMA_ICHIBA_INSTANCE_PROJECT`
+#### 1. Set `TENMA_ICHIBA_INSTANCE_PROJECT` environment.:paperclip:
 
 Set `TENMA_ICHIBA_INSTANCE_PROJECT` at .zshrc or .bashrc.
 
@@ -105,7 +105,7 @@ Set `TENMA_ICHIBA_INSTANCE_PROJECT` at .zshrc or .bashrc.
 export TENMA_ICHIBA_INSTANCE_PROJECT=your-gcp-project
 ```
 
-#### 2. Create `tenma/ichiba.yml`
+#### 2. Create `tenma/ichiba.yml`:memo:
 
 ```yaml
 android_sdk:
@@ -119,7 +119,7 @@ android_sdk:
         - extra-google-google_play_services
 ```
 
-#### 3. Run command
+#### 3. Run command:runner:
 
 Run following command, if you want to create and provision remote-build instance.
 ```
@@ -191,6 +191,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/hisaic
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
-## See also
+## See also:eyes:
 
 [モバイルアプリのリリース作業自動化への取り組み - ペパボテックブログ](https://tech.pepabo.com/2017/10/06/improve-application-release-flow/)
