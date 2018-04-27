@@ -9,7 +9,7 @@ Tenma is command line tool for mobile application development.
 
 ### :kissing_closed_eyes::kissing_closed_eyes: Prepare for mobile application release. :kissing_closed_eyes::kissing_closed_eyes:
 
-#### 1. Set `TENMA_GITHUB_TOKEN` environment.:paperclip:
+#### 1. :paperclip: Set `TENMA_GITHUB_TOKEN` environment.
 
 [Github Personal access tokens](https://github.com/settings/tokens) is required. The only necessary scope is repo.
 
@@ -18,7 +18,7 @@ Set `TENMA_GITHUB_TOKEN` at .zshrc or .bashrc.
 export TENMA_GITHUB_TOKEN=your-github-personal-access-token
 ```
 
-#### 2. Create `tenma/prepare.yml`:memo:
+#### 2. :memo: Create `tenma/prepare.yml`
 
 ```yaml
 github:
@@ -61,7 +61,7 @@ release_pullreq:
         Release pull-request's body
 ```
 
-#### 3. Run command:runner:
+#### 3. :runner: Run command
 
 Run following command, if you want to create KPT issue and Release issue.
 ```
@@ -73,7 +73,7 @@ Run following command, if you want to create Release branch and Release pull-req
 bundle exec tenma prepare --release-branch --release-pullreqs --version 7.14.0
 ```
 
-#### 4. Finish! :helicopter:
+#### 4. :helicopter: Finish!
 
 Execute the `tenma help prepare` command, If you want more information.
 
@@ -97,7 +97,7 @@ Options:
 
 ### :relaxed::relaxed: Manipulate "Android-remote-build" instance. :relaxed::relaxed:
 
-#### 1. Set `TENMA_ICHIBA_INSTANCE_PROJECT` environment.:paperclip:
+#### 1. :paperclip: Set `TENMA_ICHIBA_INSTANCE_PROJECT` environment.
 
 Set `TENMA_ICHIBA_INSTANCE_PROJECT` at .zshrc or .bashrc.
 
@@ -105,7 +105,7 @@ Set `TENMA_ICHIBA_INSTANCE_PROJECT` at .zshrc or .bashrc.
 export TENMA_ICHIBA_INSTANCE_PROJECT=your-gcp-project
 ```
 
-#### 2. Create `tenma/ichiba.yml`:memo:
+#### 2. :memo: Create `tenma/ichiba.yml`
 
 ```yaml
 android_sdk:
@@ -119,7 +119,7 @@ android_sdk:
         - extra-google-google_play_services
 ```
 
-#### 3. Run command:runner:
+#### 3. :runner: Run command
 
 Run following command, if you want to create and provision remote-build instance.
 ```
@@ -131,7 +131,7 @@ Run following command, if you want to delete remote-build instance.
 bundle exec tenma ichiba --delete-instance
 ```
 
-#### 4. Finish! :helicopter:
+#### 4. :helicopter: Finish!
 
 Execute the `tenma help ichiba` command, If you want more information.
 
@@ -191,6 +191,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/hisaic
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
-## See also:eyes:
+## :eyes::eyes: See also :eyes::eyes:
 
 [モバイルアプリのリリース作業自動化への取り組み - ペパボテックブログ](https://tech.pepabo.com/2017/10/06/improve-application-release-flow/)
