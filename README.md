@@ -89,7 +89,7 @@ Options:
   [--release-branch], [--no-release-branch]
   [--release-pullreqs], [--no-release-pullreqs]
   [--config-file=CONFIG-FILE]
-                                                 # Default: ./tenma/tenma/prepare.yml
+                                                 # Default: ./tenma/prepare.yml
   [--github-token=GITHUB-TOKEN]
                                                  # Default: <Github personal access token>
   --version=VERSION
