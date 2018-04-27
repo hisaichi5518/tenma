@@ -97,7 +97,11 @@ Options:
 
 ### :relaxed::relaxed: Manipulate "Android-remote-build" instance. :relaxed::relaxed:
 
-#### 1. :paperclip: Set `TENMA_ICHIBA_INSTANCE_PROJECT` environment.
+#### 1. :cloud: Install `gcloud` command.
+
+[About gcloud](https://cloud.google.com/sdk/gcloud)
+
+#### 2. :paperclip: Set `TENMA_ICHIBA_INSTANCE_PROJECT` environment.
 
 Set `TENMA_ICHIBA_INSTANCE_PROJECT` at .zshrc or .bashrc.
 
@@ -105,7 +109,7 @@ Set `TENMA_ICHIBA_INSTANCE_PROJECT` at .zshrc or .bashrc.
 export TENMA_ICHIBA_INSTANCE_PROJECT=your-gcp-project
 ```
 
-#### 2. :memo: Create `tenma/ichiba.yml`
+#### 3. :memo: Create `tenma/ichiba.yml`
 
 ```yaml
 android_sdk:
@@ -119,7 +123,7 @@ android_sdk:
         - extra-google-google_play_services
 ```
 
-#### 3. :runner: Run command
+#### 4. :runner: Run command
 
 Run following command, if you want to create and provision remote-build instance.
 ```
@@ -131,7 +135,7 @@ Run following command, if you want to delete remote-build instance.
 bundle exec tenma ichiba --delete-instance
 ```
 
-#### 4. :helicopter: Finish!
+#### 5. :helicopter: Finish!
 
 Execute the `tenma help ichiba` command, If you want more information.
 
