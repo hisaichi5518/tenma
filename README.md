@@ -105,7 +105,7 @@ Set `TENMA_ICHIBA_INSTANCE_PROJECT` at .zshrc or .bashrc.
 export TENMA_ICHIBA_INSTANCE_PROJECT=your-gcp-project
 ```
 
-#### 2. Create `tenma/ichiba.json`
+#### 2. Create `tenma/ichiba.yml`
 
 ```yaml
 android_sdk:
