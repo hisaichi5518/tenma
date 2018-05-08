@@ -3,7 +3,7 @@ module Tenma
     def run(command)
       output = `#{command}`
       if !$?.success?
-        raise CommandException, "Failed!"
+        raise CommandException, "Failed! #{command}"
       end
 
       return output
