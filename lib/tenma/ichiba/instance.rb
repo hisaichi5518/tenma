@@ -5,6 +5,9 @@ module Tenma
     class Instance
 
       attr_reader :context, :name, :type, :zone, :project, :disk_size
+
+      include Tenma::Runnable
+
       def initialize(context)
         @context = context
         @name = @context.options.raw.instance_name
@@ -16,7 +19,7 @@ module Tenma
 
       def create
         puts "Create instance..."
-        puts `gcloud compute instances create #{name} --image-family ubuntu-1710 --image-project ubuntu-os-cloud --preemptible --machine-type #{type} --zone #{zone} --project #{project} --boot-disk-size #{disk_size}GB`
+        puts run "gcloud compute instances create #{name} --image-family ubuntu-1710 --image-project ubuntu-os-cloud --preemptible --machine-type #{type} --zone #{zone} --project #{project} --boot-disk-size #{disk_size}GB"
       end
 
       def provision
@@ -29,8 +32,8 @@ module Tenma
         end
 
         # In order to execute Itamae, it is necessary to set up ssh config.
-        puts `gcloud compute config-ssh --remove --ssh-key-file #{file} --project #{project}`
-        puts `gcloud compute config-ssh --ssh-key-file #{file} --project #{project}`
+        puts run "gcloud compute config-ssh --remove --ssh-key-file #{file} --project #{project}"
+        puts run "gcloud compute config-ssh --ssh-key-file #{file} --project #{project}"
 
         puts "Provision instance..."
         role_file = File.expand_path('../itamae/roles/remote.rb', __FILE__)
@@ -47,14 +50,14 @@ module Tenma
 
       def delete
         puts "Delete instance..."
-        puts `gcloud compute instances delete #{name} --delete-disks all --quiet --zone #{zone} --project #{project}`
+        puts run "gcloud compute instances delete #{name} --delete-disks all --quiet --zone #{zone} --project #{project}"
       end
 
       def restart
         puts "Reset instance..."
-        puts `gcloud compute instances reset #{name} --zone #{zone} --project #{project}`
+        puts run "gcloud compute instances reset #{name} --zone #{zone} --project #{project}"
         puts "Start instance..."
-        puts `gcloud compute instances start #{name} --zone #{zone} --project #{project}`
+        puts run "gcloud compute instances start #{name} --zone #{zone} --project #{project}"
       end
     end
   end
