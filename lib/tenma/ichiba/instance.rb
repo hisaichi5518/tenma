@@ -1,4 +1,5 @@
 require 'itamae/runner'
+require 'tenma/runnable'
 
 module Tenma
   module Ichiba
