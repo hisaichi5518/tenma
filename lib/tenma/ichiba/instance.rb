@@ -1,4 +1,4 @@
-require 'itamae/runner'
+require 'itamae'
 require 'tenma/runnable'
 
 module Tenma
