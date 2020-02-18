@@ -197,4 +197,5 @@ The gem is available as open source under the terms of the [MIT License](http://
 
 ## :eyes::eyes: See also :eyes::eyes:
 
-[モバイルアプリのリリース作業自動化への取り組み - ペパボテックブログ](https://tech.pepabo.com/2017/10/06/improve-application-release-flow/)
+- [モバイルアプリのリリース作業自動化への取り組み - ペパボテックブログ](https://tech.pepabo.com/2017/10/06/improve-application-release-flow/)
+- [minne Androidアプリのビルドをリモートビルドで高速化！ - ペパボテックブログ](https://tech.pepabo.com/2018/05/01/remote-build-for-android/)
