@@ -121,6 +121,9 @@ android_sdk:
         - extra-android-m2repository
         - extra-google-m2repository
         - extra-google-google_play_services
+
+# Specify your java sdk version. Default: 8
+java_version: 11
 ```
 
 #### 4. :runner: Run command
