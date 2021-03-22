@@ -5,5 +5,6 @@ if node[:kernel][:machine] == 'x86_64'
   end
 end
 
-# Install Java8
-package "openjdk-8-jdk-headless"
+# Install Java
+java_version = node[:java_version] || 8
+package "openjdk-#{java_version}-jdk-headless"
