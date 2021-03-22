@@ -122,7 +122,7 @@ android_sdk:
         - extra-google-m2repository
         - extra-google-google_play_services
 
-# Specify your java sdk version. Default: 8
+# Specify java sdk version if needed. Default: 8
 java_version: 11
 ```
 
