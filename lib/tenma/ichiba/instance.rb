@@ -46,6 +46,7 @@ module Tenma
           sudo: true,
           shell: "/bin/sh",
           log_level: "info",
+          tmp_dir: '/tmp/remote_instance'
         })
       end
 
